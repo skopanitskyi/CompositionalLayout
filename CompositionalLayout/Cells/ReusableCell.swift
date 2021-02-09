@@ -17,20 +17,20 @@ class ReusableCell: UICollectionViewCell {
     
     public let productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Gilroy-Bold", size: 16)
+        label.font = .gilroyBold(withSize: 16)
         return label
     }()
     
     public let productDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Gilroy-Medium", size: 14)
+        label.font = .gilroyMedium(withSize: 14)
         label.textColor = UIColor(red: 124/255, green: 124/255, blue: 123/255, alpha: 1)
         return label
     }()
     
     public let producePriceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Gilroy-Bold", size: 18)
+        label.font = .gilroyBold(withSize: 18)
         return label
     }()
     

@@ -17,7 +17,7 @@ class GroceriesCell: UICollectionViewCell {
     
     public let categoryLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Gilroy-Bold", size: 20)
+        label.font = .gilroyBold(withSize: 20)
         return label
     }()
     
@@ -33,7 +33,7 @@ class GroceriesCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = frame.height / 10
+        setupCornerRadius()
     }
     
     private func setupCategoryImageView() {
@@ -52,5 +52,9 @@ class GroceriesCell: UICollectionViewCell {
         categoryLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         categoryLabel.leadingAnchor.constraint(equalTo: categoryImageView.trailingAnchor, constant: 15).isActive = true
         categoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15).isActive = true
+    }
+    
+    private func setupCornerRadius() {
+        layer.cornerRadius = frame.height / 10
     }
 }

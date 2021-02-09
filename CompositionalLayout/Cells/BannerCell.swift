@@ -16,9 +16,8 @@ class BannerCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupSelf()
         setupImageView()
-        layer.borderWidth = 1
-        layer.borderColor = CGColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
     }
     
     required init?(coder: NSCoder) {
@@ -28,6 +27,11 @@ class BannerCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         setupCornerRadius()
+    }
+    
+    private func setupSelf() {
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.defaultBorderBackground.cgColor
     }
     
     private func setupImageView() {

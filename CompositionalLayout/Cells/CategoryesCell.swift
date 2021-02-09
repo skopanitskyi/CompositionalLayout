@@ -17,7 +17,7 @@ class CategoryesCell: UICollectionViewCell {
     
     public let categoryLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Gilroy-Bold", size: 20)
+        label.font = .gilroyBold(withSize: 20)
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
@@ -27,7 +27,6 @@ class CategoryesCell: UICollectionViewCell {
         super.init(frame: frame)
         setupCategoryImageView()
         setupCategoryLabel()
-        layer.borderWidth = 1
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +35,12 @@ class CategoryesCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        setupSelf()
+    }
+    
+    private func setupSelf() {
         layer.cornerRadius = frame.height / 10
+        layer.borderWidth = 1
     }
     
     private func setupCategoryImageView() {

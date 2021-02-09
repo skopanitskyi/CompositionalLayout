@@ -15,6 +15,7 @@
 		5B23403E25D085B700CCBC52 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B23403625D0163800CCBC52 /* Gilroy-Regular.ttf */; };
 		5B23404225D08D9A00CCBC52 /* GroceriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23404125D08D9A00CCBC52 /* GroceriesCell.swift */; };
 		5B23404625D090FF00CCBC52 /* CategoryesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23404525D090FF00CCBC52 /* CategoryesCell.swift */; };
+		5B23407325D334EF00CCBC52 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23407225D334EF00CCBC52 /* UIFont+Extension.swift */; };
 		5BD4707C25CF371C0067AD9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4707B25CF371C0067AD9B /* AppDelegate.swift */; };
 		5BD4707E25CF371C0067AD9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4707D25CF371C0067AD9B /* SceneDelegate.swift */; };
 		5BD4708025CF371C0067AD9B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4707F25CF371C0067AD9B /* MainController.swift */; };
@@ -34,6 +35,8 @@
 		5B23403B25D085B000CCBC52 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 		5B23404125D08D9A00CCBC52 /* GroceriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesCell.swift; sourceTree = "<group>"; };
 		5B23404525D090FF00CCBC52 /* CategoryesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryesCell.swift; sourceTree = "<group>"; };
+		5B23406D25D32E4500CCBC52 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		5B23407225D334EF00CCBC52 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		5BD4707825CF371C0067AD9B /* CompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD4707B25CF371C0067AD9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD4707D25CF371C0067AD9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +79,33 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5B23406C25D32E4500CCBC52 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5B23406D25D32E4500CCBC52 /* Gilroy-Bold.ttf */,
+				5B23403B25D085B000CCBC52 /* Gilroy-Medium.ttf */,
+				5B23403625D0163800CCBC52 /* Gilroy-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5B23406E25D32E6500CCBC52 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BD4707F25CF371C0067AD9B /* MainController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B23407025D334D900CCBC52 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B23402925CFED9A00CCBC52 /* UIColor+Extension.swift */,
+				5B23407225D334EF00CCBC52 /* UIFont+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5BD4706F25CF371C0067AD9B = {
 			isa = PBXGroup;
 			children = (
@@ -97,17 +127,16 @@
 			children = (
 				5BD4707B25CF371C0067AD9B /* AppDelegate.swift */,
 				5BD4707D25CF371C0067AD9B /* SceneDelegate.swift */,
-				5B23402925CFED9A00CCBC52 /* UIColor+Extension.swift */,
+				5B23407025D334D900CCBC52 /* Extension */,
 				5BD4709D25CF40D40067AD9B /* Coordinators */,
-				5BD4707F25CF371C0067AD9B /* MainController.swift */,
+				5B23406E25D32E6500CCBC52 /* Controllers */,
 				5B23403225D0105800CCBC52 /* Cells */,
 				5B23404025D08D0E00CCBC52 /* Views */,
+				5B23406C25D32E4500CCBC52 /* Fonts */,
 				5BD4708425CF371F0067AD9B /* Assets.xcassets */,
 				5BD4708625CF371F0067AD9B /* LaunchScreen.storyboard */,
 				5BD4708925CF371F0067AD9B /* Info.plist */,
 				5B23403825D0855C00CCBC52 /* Gilroy-Bold.ttf */,
-				5B23403B25D085B000CCBC52 /* Gilroy-Medium.ttf */,
-				5B23403625D0163800CCBC52 /* Gilroy-Regular.ttf */,
 			);
 			path = CompositionalLayout;
 			sourceTree = "<group>";
@@ -199,6 +228,7 @@
 				5BD4709B25CF3CC80067AD9B /* MainView.swift in Sources */,
 				5BD4708025CF371C0067AD9B /* MainController.swift in Sources */,
 				5B23404225D08D9A00CCBC52 /* GroceriesCell.swift in Sources */,
+				5B23407325D334EF00CCBC52 /* UIFont+Extension.swift in Sources */,
 				5BD4707C25CF371C0067AD9B /* AppDelegate.swift in Sources */,
 				5B23404625D090FF00CCBC52 /* CategoryesCell.swift in Sources */,
 				5BD4707E25CF371C0067AD9B /* SceneDelegate.swift in Sources */,
