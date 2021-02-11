@@ -88,4 +88,8 @@ extension UIColor {
     public static var drinksBorderBackgroundColor: UIColor {
         return .getColor(red: 215, green: 59, blue: 119, alpha: 0.5)
     }
+    
+    public static var productDescriptionTextColor: UIColor {
+        return .getColor(red: 124, green: 124, blue: 123)
+    }
 }

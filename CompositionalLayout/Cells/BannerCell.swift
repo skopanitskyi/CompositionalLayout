@@ -7,12 +7,21 @@
 
 import UIKit
 
+private enum BannerCellConstants {
+    static let cellBorderWidth: CGFloat = 1
+    static let cellCornerRadiusDivisor: CGFloat = 10
+}
+
 class BannerCell: UICollectionViewCell {
+    
+    // MARK: - Create UI elements
     
     public let imageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
     }()
+    
+    // MARK: - Constructors
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,15 +33,14 @@ class BannerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Overrides methods
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         setupCornerRadius()
     }
     
-    private func setupSelf() {
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.defaultBorderBackground.cgColor
-    }
+    // MARK: - Setup UI elements
     
     private func setupImageView() {
         addSubview(imageView)
@@ -43,7 +51,14 @@ class BannerCell: UICollectionViewCell {
         imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
+    // MARK: - Private methods
+    
     private func setupCornerRadius() {
-        layer.cornerRadius = frame.height / 10
+        layer.cornerRadius = frame.height / BannerCellConstants.cellCornerRadiusDivisor
+    }
+    
+    private func setupSelf() {
+        layer.borderWidth = BannerCellConstants.cellBorderWidth
+        layer.borderColor = UIColor.defaultBorderBackground.cgColor
     }
 }

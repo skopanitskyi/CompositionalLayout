@@ -28,9 +28,15 @@ protocol MainControllerOutput: class {
 
 class MainController: UIViewController {
     
+    // MARK: - Public variables
+    
     public weak var output: MainControllerOutput?
     
+    // MARK: - Private variables
+    
     private lazy var mainView = MainView(sectionType: getSection(for:))
+    
+    // MARK: - Private constants
     
     private let dataSource = [[Sections.banner(#imageLiteral(resourceName: "banner")),
                                Sections.banner(#imageLiteral(resourceName: "banner")),
@@ -116,16 +122,20 @@ class MainController: UIViewController {
                                                    backgroundColor: .drinksBackgroundColor,
                                                    borderBackgroundColor: .drinksBorderBackgroundColor)]]
     
+    // MARK: - Ovverides methods
+    
     override func loadView() {
         view = mainView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSelf()
+        setupCollectionView()
     }
     
-    private func setupSelf() {
+    // MARK: - Private methods
+    
+    private func setupCollectionView() {
         mainView.collectionView.register(BannerCell.self, forCellWithReuseIdentifier: MainControllerConstants.bannerId)
         mainView.collectionView.register(ReusableCell.self, forCellWithReuseIdentifier: MainControllerConstants.reusableId)
         mainView.collectionView.register(GroceriesCell.self, forCellWithReuseIdentifier: MainControllerConstants.groceriesId)
@@ -140,9 +150,13 @@ class MainController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension MainController: UICollectionViewDelegate {
     
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension MainController: UICollectionViewDataSource {
     
